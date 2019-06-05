@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Start Page</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+    <body style="text-align: center">
+        <h1>Exam Prep - Pet Hospital</h1>
+        <hr>
+        <p>@Path("/petcount")</p>
+        <a href="http://localhost:8084/ExamPrepPetHospital/api/pet/petcount">ExamPrepPetHospital/api/pet/petcount</a>
+        <br>
+        Output:
+        4
+        <hr>
+        <p>@Path("/allpets")</p>  
+        <a href="http://localhost:8084/ExamPrepPetHospital/api/pet/allpets">ExamPrepPetHospital/api/pet/allpets</a>
+        <br>
+        Output:
+        [
+    {
+        "id": 1,
+        "name": "Fiddo",
+        "birth": "Feb 1, 2015 12:00:00 AM",
+        "species": "Dog",
+        "owner": "Jens"
+    },
+    {
+        "id": 2,
+        "name": "Hannibal",
+        "birth": "May 10, 2013 1:00:00 AM",
+        "species": "Dog",
+        "owner": "Jens"
+    },
+    {
+        "id": 4,
+        "name": "Sam",
+        "birth": "Jan 5, 2012 12:00:00 AM",
+        "species": "Rabbit",
+        "death": "Jul 7, 2015 1:00:00 AM",
+        "owner": "Arne"
+    },
+    {
+        "id": 3,
+        "name": "Elvis",
+        "birth": "Aug 8, 2010 1:00:00 AM",
+        "species": "Cat",
+        "owner": "Hanne"
+    }
+]
+        <hr>
+        <p>@Path("/allpets/alive")</p>  
+        <a href="http://localhost:8084/ExamPrepPetHospital/api/pet/allpets/alive">ExamPrepPetHospital/api/pet/allpets/alive</a>
+        <br>
+        Output:
+        [
+    {
+        "id": 1,
+        "name": "Fiddo",
+        "birth": "Feb 1, 2015 12:00:00 AM",
+        "species": "Dog",
+        "owner": "Jens"
+    },
+    {
+        "id": 2,
+        "name": "Hannibal",
+        "birth": "May 10, 2013 1:00:00 AM",
+        "species": "Dog",
+        "owner": "Jens"
+    },
+    {
+        "id": 3,
+        "name": "Elvis",
+        "birth": "Aug 8, 2010 1:00:00 AM",
+        "species": "Cat",
+        "owner": "Hanne"
+    }
+]
+        <hr>
+        <p>@Path("/petsbyevent/{date}")</p>  
+        <a href="http://localhost:8084/ExamPrepPetHospital/api/pet/petsbyevent/2015-07-07">ExamPrepPetHospital/api/pet/petsbyevent/2015-07-07</a>
+        <br>
+        Output:
+        []
+        <hr>
+        <p>@Path("/event")</p>  
+        <a href="http://localhost:8084/ExamPrepPetHospital/api/pet/event?id=1">ExamPrepPetHospital/api/pet/event?id=1</a>
+        <br>
+        Output:
+        {
+    "id": 1,
+    "event": "Death",
+    "remark": "Died of age",
+    "date": "Jul 7, 2015 1:00:00 AM"
+}
+    </body>
+</html>
